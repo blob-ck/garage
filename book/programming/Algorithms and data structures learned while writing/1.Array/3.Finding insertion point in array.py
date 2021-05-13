@@ -1,4 +1,8 @@
 # 배열에서 삽입 위치 찾기
+# 관련 사이트
+# https://leetcode.com/problems/search-insert-position/
+# https://www.hackerearth.com/practice/algorithms/searching/linear-search/practice-problems/algorithm/simple-search-4/
+
 # 정렬된 배열과 목표값이 주어지는데,
 # 목표값과 일치하는 요소가 있다면 해당 인덱스를 반환하고
 # 목표값과 일치하는 요소가 없다면 정렬상태를 유지하도록 알맞은 인덱스를 반환

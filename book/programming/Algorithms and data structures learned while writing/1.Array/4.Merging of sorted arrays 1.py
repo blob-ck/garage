@@ -1,4 +1,9 @@
 # 정렬된 배열의 병합
+# 관련사이트
+# https://leetcode.com/problems/merge-sorted-array/
+# https://www.codechef.com/problems/CCCB03
+# https://www.interviewbit.com/problems/merge-two-sorted-lists-ii/
+
 # 주어진 정렬된 두 배열(nums1, nums2)을 정렬을 유지하면서 병합
 # nums1 과 nums2의 각각 m, n 개의 요소로 초기화 되어있다(배열크기가 아니라 요소개수, 빈 공간이 있을수 있음)
 # nums1은 nums1과 nums2를 병합하기에 충분한 크기로 할당되어 있다(m + n개)

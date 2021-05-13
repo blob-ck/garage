@@ -1,3 +1,9 @@
+# 원하는 두 수의 합 찾기
+# 관련 사이트
+# https://leetcode.com/problems/two-sum/
+# https://www.hackerrank.com/challenges/pairs/problem
+# https://www.acmicpc.net/problem/3273
+
 # 주어진 정수형 배열에서 2개의 숫자를 선택하여 더한 값이 특정 목표값을 만들 때
 # 그 선택한 2개의 정수가 있는 배열의 인덱스를 반환하는 프로그램 작성
 # 입력값으로 주어지는 배열에는 정확히 하나의 정답만 존재하며,
