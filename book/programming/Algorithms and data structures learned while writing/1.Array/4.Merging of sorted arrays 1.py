@@ -11,7 +11,7 @@ from typing import List
 
 # ----------------------------------------------------------------------------------------------
 # python 의 특징 : Slice Alignment
-def append_list(in_list):
+def append_list(in_list:List[int]):
   # in_list = [3, 4] => 이 경우 파라미터로 넘어온 list_test는 [3, 4]가 될 것같지만
   # 일반대입으로 이루어지는 리트스 연산은 값에 의한 호출로 처리된다네
   # 즉, 함수 내에 값이 할당되는 순간 새로운 리스트를 생성하여 해당값을 처리
@@ -46,7 +46,7 @@ NUMS2 = [2, 5, 6]
 # 2.sorted() 사용
 # 시간복잡도: O(NlogN) -> sorted는 TimSort를 사용한다. 자바, 스위프트도 사용
 # 공간복잡도: O(N) -> sorted는 TimSort를 사용한다.
-def merge11(nums1, nums2):
+def merge11(nums1:List[int], nums2:List[int]) -> List[int]:
   startIndex = len(nums1) - len(nums2)
   for i in range(len(nums2)):
     nums1[startIndex + i] = nums2[i]
@@ -57,7 +57,7 @@ print(merge11(NUMS1, NUMS2))
 
 # Idea 1-2
 # python의 음수 index사용 -> 변수하나 덜 사용했음
-def merge12(nums1, nums2):
+def merge12(nums1:List[int], nums2:List[int]) -> List[int]:
   for i in range(len(nums2)):
     nums1[-(i+1)] = nums2[i]
   return sorted(nums1)
