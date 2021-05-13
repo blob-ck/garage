@@ -94,13 +94,13 @@ def merge2(nums1, m, nums2, n):
     if(nums1[i] > nums2[j]):
       nums1[k] = nums1[i]
       i -= 1
-      
+
     elif(nums1[i] < nums2[j]):
       nums1[k] = nums2[j]
       j -= 1
     
-    # 책과는 다르게 값이 같은 경우도 처리했음 -> 추가로 while 쓸 필요 없음
-    elif(nums1[i] == nums2[j]):
+    # 책과는 다르게 값이 같은 경우도 처리했음
+    else: # nums1[i] == nums2[j]
       nums1[k] = nums1[i]
       i -= 1
       k -= 1
@@ -111,5 +111,35 @@ def merge2(nums1, m, nums2, n):
     #   비교하여 큰 쪽 인덱스 값이 k 에 추가되었으므로 큰 쪽의 인덱스는 1 감소한다
     k -= 1
 
+  # NUMS1 이 원소가 없을 때(0으로만 채워진 경우) 처리
+  #   nums1[i] == nums2[j] 를 처리하면 하나의 while만으로 끝날줄 알았으나
+  #   테스트케이스 중 nums1에 0만 채워진 경우를 넘기지 못했음
+  while(j >= 0):
+    nums1[k] = nums2[j]
+    k -= 1
+    j -= 1
+
+
 merge2(NUMS1, 5, NUMS2, 3)
+print(NUMS1)
+
+
+
+# 여러 테스트 케이스
+# 1. 빈 배열
+NUMS1 =[1,2,3]
+NUMS2 = []
+merge2(NUMS1, 3, NUMS2, 0)
+print(NUMS1)
+
+# 2. NUMS1 이 원소가 없을 때(0으로만 채워진 경우)
+NUMS1 =[0,0,0]
+NUMS2 = [1,2,3]
+merge2(NUMS1, 0, NUMS2, 3)
+print(NUMS1)
+
+# 3. 정렬할 필요가 없는 경우
+NUMS1 =[1,2,3,0,0,0]
+NUMS2 = [4,5,6]
+merge2(NUMS1, 3, NUMS2, 3)
 print(NUMS1)
