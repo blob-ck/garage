@@ -16,8 +16,6 @@
 from typing import List
 
 def pascalTriangle(n:int) -> List[List[int]]:
-
-
   # 약속을 하자
   # n은 층을 나타낸다. 층은 마지막 배열의 원소개수와 같다. 각 내부배열의 인덱스 + 1 과 같다
   outterList = []
